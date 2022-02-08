@@ -1,0 +1,46 @@
+.product-modal {
+  display: none;
+  position: absolute;
+  background-color: $white;
+  border: 1px solid #c6c6c6;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+
+  @media (min-width: $mobile-width) {
+    width: 320px;
+    top: 50%;
+    padding: 29px 30px 46px 30px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 566px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 38px 105px 46px 105px;
+  }
+
+  &--open {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.product-modal__title {
+  display: block;
+  text-transform: uppercase;
+  font-size: 25px;
+
+  @media (max-width: 767px) {
+    width: 150px;
+    margin: 0 auto 14px auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    font-size: 30px;
+    line-height: 57px;
+  }
+}

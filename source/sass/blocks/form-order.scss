@@ -1,0 +1,19 @@
+.form-order__text {
+  font-size: 13px;
+  margin-top: 16px;
+  margin-bottom: 30px;
+  padding: 0 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
+    font-size: 17px;
+    line-height: 30px;
+    margin-top: 67px;
+    margin-bottom: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 45px 225px 0 225px;
+    margin-bottom: 11px;
+  }
+}

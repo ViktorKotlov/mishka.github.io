@@ -1,0 +1,55 @@
+.slider__list {
+  @include reset-list;
+}
+
+.slider__item {
+  display: none;
+}
+
+.slider__item--active {
+  display: block;
+}
+
+.slider__toggle {
+  display: flex;
+  justify-content: center;
+  margin-top: 27px;
+  margin-bottom: 39px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    bottom: 26px;
+    right: 69px;
+    width: 137px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: 73px;
+  }
+}
+
+.slider__toggle-button {
+  position: relative;
+  width: 50px;
+  height: 26px;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    border: 1px solid #ececec;
+    width: 130px;
+    height: 50px;
+  }
+
+  &:hover .slider__button-arrow {
+    opacity: 0.6;
+  }
+
+  &:active .slider__button-arrow,
+  &:focus-within .slider__button-arrow {
+    opacity: 0.3;
+  }
+}

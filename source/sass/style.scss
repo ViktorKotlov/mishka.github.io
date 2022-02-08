@@ -1,0 +1,44 @@
+//globals
+
+@import "./global/fonts.scss";
+@import "./global/variables.scss";
+@import "./global/global.scss";
+
+//mixins
+
+@import "./mixins/mixin.scss";
+
+//layout
+
+@import "./layout/header.scss";
+@import "./layout/site-nav.scss";
+@import "./layout/user-nav.scss";
+@import "./layout/main-nav-list.scss";
+@import "./layout/additional-nav-list.scss";
+
+//components
+
+@import "./components/page";
+@import "./components/button";
+@import "./components/container";
+@import "./components/title";
+@import "./components/product-modal.scss";
+@import "./components/modal-form.scss";
+@import "./components/slider.scss";
+@import "./components/overlay";
+
+//blocks
+
+@import "./blocks/advantages.scss";
+@import "./blocks/catalog-form.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/form-order";
+@import "./blocks/intro";
+@import "./blocks/page-footer";
+@import "./blocks/page-main";
+@import "./blocks/preview";
+@import "./blocks/product-card.scss";
+@import "./blocks/production";
+@import "./blocks/promo";
+@import "./blocks/reviews";

@@ -1,0 +1,65 @@
+.intro {
+  background-color: $section-bg-color;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    border-top: 1px solid #d9d9d9;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -12px;
+      height: 24px;
+      background-image: url("../img/svg/bg-line/zigzag-fill-tablet-white.svg");
+      z-index: 1;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -12px;
+      height: 34px;
+      background-image: url("../img/svg/bg-line/zigzag-fill-desktop-catalog.svg");
+      z-index: 1;
+    }
+  }
+}
+
+.intro__wrapper {
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
+  }
+}
+
+.intro__title {
+  margin: 0 auto;
+  padding: 74px 0;
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: 700;
+  text-align: center;
+  color: $black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+    padding-top: 101px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+    margin-left: 3px;
+    padding-bottom: 101px;
+  }
+}

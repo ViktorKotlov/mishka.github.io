@@ -1,0 +1,140 @@
+.site-nav {
+  position: relative;
+  width: 100%;
+}
+
+.site-nav__toggle {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  display: block;
+  width: 21px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  transform: translate(-150%, -50%);
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.site-nav--closed .site-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: 0;
+  width: 20px;
+  height: 2px;
+  background-color: #231f20;
+  box-shadow: 0 6px 0 0 #231f20, 0 12px 0 0 #231f20;
+}
+
+@media (max-width: 767px) {
+  .site-nav--closed .site-nav__wrapper {
+    display: none;
+  }
+
+  .site-nav--nojs .site-nav__wrapper {
+    display: block;
+    position: relative;
+  }
+
+  .site-nav--nojs .site-nav__toggle {
+    display: none;
+  }
+}
+
+.site-nav--opened .site-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: -3px;
+    width: 26px;
+    height: 2px;
+    background-color: #231f20;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+
+.site-nav__wrapper {
+  position: relative;
+
+  @media (max-width: 767px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $white;
+    z-index: 2;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex-grow: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+  }
+}
+
+.site-nav__list {
+  @include reset-list;
+
+  @media (min-width: $tablet-width) and (max-width: 1149px) {
+    display: flex;
+    order: 2;
+    position: absolute;
+    bottom: -45px;
+    left: 0;
+    z-index: 1;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 700;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.site-nav__delivery-text {
+  display: none;
+  color: #444444;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    position: absolute;
+    bottom: -44px;
+    right: 0;
+    z-index: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 1px;
+  }
+}

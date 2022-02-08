@@ -1,0 +1,215 @@
+.preview {
+  background-repeat: no-repeat;
+  background-color: #f9f9f9;
+  background-position: center;
+  border-top: 1px solid #ececec;
+
+  @media (max-width: 767px) {
+    background-image: url("../img/jpg/hero-mobile.jpg");
+    padding-top: 72px;
+    background-position-y: -16%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/jpg/hero-mobile@2x.jpg");
+      background-size: contain;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/jpg/hero-tablet.jpg");
+    padding-top: 155px;
+    position: relative;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/jpg/hero-tablet@2x.jpg");
+      background-size: contain;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -12px;
+      height: 24px;
+      background-image: url("../img/svg/bg-line/zigzag-fill-tablet-white.svg");
+      z-index: 1;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/jpg/hero-desktop.jpg");
+    padding-top: 157px;
+    background-position-y: -1px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/jpg/hero-desktop@2x.jpg");
+      background-size: contain;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 13px;
+      right: 0;
+      bottom: -17px;
+      height: 34px;
+      background-image: url("../img/svg/bg-line/zigzag-fill-desktop.svg");
+      z-index: 1;
+    }
+  }
+}
+
+
+.preview__title {
+  text-align: center;
+  margin: 0 auto;
+
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    min-height: 140px;
+    width: 260px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: 1149px) {
+    min-height: 250px;
+    font-size: 43px;
+    line-height: 50px;
+    width: 668px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 250px;
+    font-size: 53px;
+    line-height: 57px;
+    width: 700px;
+  }
+}
+
+.preview__list {
+  @include reset-list;
+  display: flex;
+
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    flex-direction: column;
+    margin-top: 70px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
+    margin-top: 221px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 219px;
+  }
+}
+
+.preview__item {
+  position: relative;
+
+
+  @media (min-width: $tablet-width) {
+    flex-grow: 1;
+    width: 50%;
+  }
+}
+
+.preview__link {
+  display: flex;
+  justify-content: space-between;
+  color: $white;
+  position: relative;
+  background-color: $bg-tiffany;
+  width: 100%;
+
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    padding: 24px 30px 31px 30px;
+    height: 103px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 26px 36px 34px 36px;
+    height: 119px;
+  }
+
+  &:hover,
+  &:focus-within {
+    background: #46c1ae;
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      height: 124px;
+      top: -5px;
+    }
+  }
+
+  &:active {
+    background: #46c1ae;
+  }
+
+  &:hover .preview__link-img g,
+  &:hover .preview__link-img-2 path {
+    opacity: 0.7;
+  }
+
+  &:focus-within .preview__link-img g,
+  &:focus-within .preview__link-img-2 path {
+    opacity: 0.3;
+  }
+
+  &--light-tiffany {
+    background-color: $bg-light-tiffany;
+
+    &:hover,
+    &:focus-within {
+      background: #59d5bc;
+    }
+
+    &:active {
+      background: #59d5bc;
+    }
+
+    .preview__link-title {
+      @media (min-width: $desktop-width) {
+        padding-left: 1px;
+      }
+    }
+  }
+}
+
+.preview__link-img {
+  position: absolute;
+  top: 23px;
+  right: 35px;
+
+  @media (min-width: $tablet-width) {
+    top: 30px;
+    right: 36px;
+  }
+}
+
+.preview__link-img-2 {
+  position: absolute;
+  top: 21px;
+  right: 27px;
+
+  @media (min-width: $tablet-width) {
+    top: 31px;
+    right: 33px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 34px;
+  }
+}
+
+.preview__link-title {
+  font-size: 19px;
+  font-weight: 700;
+  width: 139px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

@@ -1,0 +1,217 @@
+.production {
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    margin-top: 30px;
+    margin-bottom: 56px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 53px;
+    margin-bottom: 62px;
+    outline: 1px solid #ececec;
+    outline-offset: -1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1050px;
+    margin: 4px auto 0 auto;
+    margin-bottom: 105px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "video video title"
+      "video video desc";
+  }
+}
+
+.production__title {
+  display: flex;
+  position: relative;
+  margin: 0;
+  font-size: 17px;
+  line-height: 24px;
+
+
+  &::before {
+    content: "";
+    width: 32px;
+    height: 22px;
+    position: absolute;
+    left: 33px;
+    top: 45px;
+    transform: translateY(-50%);
+    background-image: url("../../img/svg/video.svg");
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      top: 49px;
+      left: 41px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 57px;
+      left: 79px;
+    }
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    order: -1;
+    padding: 22px 13px 24px 90px;
+    border: 1px solid #ececec;
+  }
+
+  @media (min-width: $tablet-width) {
+    border-top: 1px solid #ececec;
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+    padding: 41px 107px 24px 106px;
+    font-size: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-area: title;
+    margin-left: -18px;
+    padding: 96px 54px 27px 79px;
+  }
+}
+
+.production__description {
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    margin-top: -1px;
+    padding: 35px 32px 34px 33px;
+    border: 1px solid #ececec;
+  }
+
+  @media (min-width: $tablet-width) {
+    border-bottom: 1px solid #ececec;
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+    padding: 0 39px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-area: desc;
+    padding-left: 79px;
+    margin-left: -18px;
+    padding-right: 54px;
+  }
+}
+
+.production__title-heading {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.production__video {
+  position: relative;
+  width: 260px;
+  height: 150px;
+
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    // margin-top: 96px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 668px;
+    height: 455px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 683px;
+    margin: 0;
+    grid-area: video;
+  }
+
+  & img {
+    max-width: fit-content;
+  }
+}
+
+.production__button {
+  padding: 0;
+  border: 0;
+  width: 101px;
+  height: 77px;
+  background-color: $gray;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+
+
+  @media (min-width: $mobile-width) {
+    width: 101px;
+    height: 77px;
+    background: transparent;
+    background-image: url("../../img/svg/play-mobile.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    width: 121px;
+    height: 92px;
+    background-size: cover;
+  }
+
+  &:active {
+    width: 81px;
+    height: 61px;
+    opacity: 0.3;
+    background-size: cover;
+  }
+}
+
+.production__text {
+  font-size: 13px;
+  line-height: 24px;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 15px;
+    line-height: 30px;
+  }
+}
+
+.production__description-button {
+  cursor: pointer;
+
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    margin-top: 41px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 40px;
+    font-size: 17px;
+    margin-bottom: 47px;
+    padding: 13px 0 12px 0;
+    width: calc(100% - 4px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 51px;
+  }
+
+  &:hover {
+    background-color: #444444;
+    color: #ffffff;
+  }
+
+  &:active,
+  &:focus-within {
+    background-color: #444444;
+    color: #7c7c7c;
+  }
+}

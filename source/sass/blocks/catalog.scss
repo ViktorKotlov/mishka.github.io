@@ -1,0 +1,46 @@
+.catalog {
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    padding: 0 30px;
+    margin-top: 29px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
+    margin-top: 79px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 123px;
+  }
+}
+
+.catalog__list {
+  @include reset-list;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.catalog__item {
+  @media (max-width: $tablet-width) {
+    &:not(:last-of-type) {
+      margin-bottom: 29px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &:not(:last-of-type) {
+      margin-bottom: 54px;
+    }
+  }
+
+  &:not(:nth-child(3n+3)) {
+    @media (min-width: $desktop-width) {
+      margin-right: 51px;
+    }
+  }
+}

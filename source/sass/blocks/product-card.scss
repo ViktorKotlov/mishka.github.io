@@ -1,0 +1,149 @@
+.product-card {
+  &:hover .product-card__content {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active .product-card__content,
+  &:focus-within .product-card__content {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    width: 316px;
+  }
+}
+
+.product-card__content {
+  border: 1px solid #ececec;
+  padding: 27px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    padding: 27px 32px 23px 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 27px;
+  }
+}
+
+.product-card__main-info {
+  border-bottom: 1px solid #ececec;
+  padding-bottom: 17px;
+
+  @media (min-width: $tablet-width) {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 95px;
+    padding: 0;
+  }
+}
+
+.product-card__image {
+  display: block;
+  background-color: $section-bg-color;
+  width: 260px;
+  height: 195px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    min-width: 334px;
+    min-height: 334px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 316px;
+    min-height: 462px;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.product-card__title {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
+}
+
+.product-card__text {
+  display: block;
+  font-size: 13px;
+  line-height: 30px;
+  margin-top: 6px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 15px;
+    flex-grow: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 5px;
+  }
+}
+
+.product-card__price {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+  }
+}
+
+.product-card__additional-info {
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    min-height: 24px;
+    margin-top: 25px;
+    padding: 0;
+  }
+}
+
+.product-card__button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+
+  svg {
+    opacity: 0.2;
+  }
+
+  &:hover svg {
+    fill: #63d1bb;
+    opacity: 1;
+  }
+
+  &:active svg,
+  &:focus-within svg {
+    fill: #63d1bb;
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    align-self: flex-start;
+  }
+}

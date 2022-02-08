@@ -1,0 +1,26 @@
+.page {
+  height: 100%;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.page__body {
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  color: $gray;
+  background-color: $white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &--modal-open {
+    overflow: hidden;
+  }
+}
+
+.page__wrapper {
+  margin: 0 auto;
+  max-width: 1150px;
+}
